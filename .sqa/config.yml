@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/micheleartini/dnet-oai-server:
+      branch: main
+      repo: https://github.com/micheleartini/dnet-oai-server
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/micheleartini/dnet-oai-server git:
+        commands:
+        - /usr/bin/env sh .sqa/script.emerald_stoic_kiwi.sh
+        container: qc.acc_wheat_independent_eagle
+  QC.Doc:
+    repos:
+      github.com/micheleartini/dnet-oai-server find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.grape_dreamy_hydra.sh
+        container: qc.doc_turquoise_apprehensive_tiger
+      github.com/micheleartini/dnet-oai-server git:
+        commands:
+        - /usr/bin/env sh .sqa/script.echelon_loyal_panther.sh
+        container: qc.doc_rosewater_ardent_toucan
+      github.com/micheleartini/dnet-oai-server markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lilac_rational_goat.sh
+        container: qc.doc_yellow_mischievous_rattlesnake
+  QC.Lic:
+    repos:
+      github.com/micheleartini/dnet-oai-server licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.malachite_industrious_turtle.sh
+        container: qc.lic_cherry_feisty_crow
+  QC.Sty:
+    repos:
+      github.com/micheleartini/dnet-oai-server checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.avocado_shrewd_caribou.sh
+        container: qc.sty_grape_unique_vulture
+      github.com/micheleartini/dnet-oai-server jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.yellow_reflective_crane.sh
+        container: qc.sty_ceru_outgoing_dolphin
+  QC.Ver:
+    repos:
+      github.com/micheleartini/dnet-oai-server get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cream_attentive_llama.sh
+        container: qc.ver_mist_empathetic_uakari
+timeout: 5400

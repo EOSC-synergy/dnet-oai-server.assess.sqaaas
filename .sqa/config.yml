@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/micheleartini/dnet-oai-server git:
         commands:
-        - /usr/bin/env sh .sqa/script.emerald_stoic_kiwi.sh
-        container: qc.acc_wheat_independent_eagle
+        - /usr/bin/env sh .sqa/script.lemon_careful_alligator.sh
+        container: qc.acc_jade_enthusiastic_hamster
   QC.Doc:
     repos:
       github.com/micheleartini/dnet-oai-server find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grape_dreamy_hydra.sh
-        container: qc.doc_turquoise_apprehensive_tiger
+        - /usr/bin/env sh .sqa/script.avocado_fierce_porcupine.sh
+        container: qc.doc_moss_spirited_turtle
       github.com/micheleartini/dnet-oai-server git:
         commands:
-        - /usr/bin/env sh .sqa/script.echelon_loyal_panther.sh
-        container: qc.doc_rosewater_ardent_toucan
+        - /usr/bin/env sh .sqa/script.watermelon_optimistic_peacock.sh
+        container: qc.doc_burgundy_understanding_chimpanzee
       github.com/micheleartini/dnet-oai-server markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lilac_rational_goat.sh
-        container: qc.doc_yellow_mischievous_rattlesnake
+        - /usr/bin/env sh .sqa/script.currant_warm_turtle.sh
+        container: qc.doc_seafoam_grumpy_starfish
   QC.Lic:
     repos:
       github.com/micheleartini/dnet-oai-server licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.malachite_industrious_turtle.sh
-        container: qc.lic_cherry_feisty_crow
+        - /usr/bin/env sh .sqa/script.reef_rugged_chimpanzee.sh
+        container: qc.lic_indigo_careful_dragon
   QC.Sty:
     repos:
       github.com/micheleartini/dnet-oai-server checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.avocado_shrewd_caribou.sh
-        container: qc.sty_grape_unique_vulture
+        - /usr/bin/env sh .sqa/script.claret_respectful_beaver.sh
+        container: qc.sty_ebony_driven_panther
       github.com/micheleartini/dnet-oai-server jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.yellow_reflective_crane.sh
-        container: qc.sty_ceru_outgoing_dolphin
+        - /usr/bin/env sh .sqa/script.ecru_plucky_orca.sh
+        container: qc.sty_cornflower_peppy_clownfish
   QC.Ver:
     repos:
       github.com/micheleartini/dnet-oai-server get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cream_attentive_llama.sh
-        container: qc.ver_mist_empathetic_uakari
+        - /usr/bin/env sh .sqa/script.sage_funny_wolverine.sh
+        container: qc.ver_mulberry_assured_fox
 timeout: 5400
